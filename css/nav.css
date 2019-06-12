@@ -1,10 +1,82 @@
 /* --------------------------
   Main Styles
 --------------------------- */
+.main-header,
+.nav {
+  display: flex;
+  flex-direction: column;
+}
 
+.main-header {
+  padding-top: 2em;
+}
+
+.site-logo {
+  width: 110px;
+  align-self: center;
+}
+
+.nav {
+  margin-top: 1.5em;
+}
+
+.nav a {
+  display: block;
+  color: #787e83;
+  font-size: 1.125em;
+  font-weight: 300;
+  text-align: center;
+  padding: .4em;
+  border-bottom: 1px solid #ebecec;
+  transition: all 0.3s;
+}
+
+.nav a:hover {
+  color: #0b0b0b;
+  border-bottom-color: #52bab3;
+}
 
 
 /* --------------------------
   Media Queries
 --------------------------- */
+@media only screen and (min-width: 769px) {
 
+  .main-header {
+    height: 200px;
+    justify-content: flex-end;
+  }
+
+  .site-logo {
+    width: 140px;
+  }
+
+  .nav {
+    margin-top: 3em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav a {
+    border-bottom-color: transparent;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    margin-top: 0;
+  }
+
+  .nav li:not(:last-child) {
+    margin-right: 1.3em;
+  }
+
+}
